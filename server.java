@@ -4,7 +4,7 @@ import java.net.*;
 public class server {
     public static void main(String[] args) {
         if (args.length != 1) {
-            System.out.println("Usage: java server <port_number>");
+            System.out.println("Incorrect Format. Use: java server <port>");
             return;
         }
 
@@ -45,11 +45,11 @@ public class server {
                 if (inputLine.matches("^[a-zA-Z]+$")) {
                     out.println(inputLine.toUpperCase());
                 } else {
-                    out.println("ERROR: String contains non-alphabets. Please type it again.");
+                    out.println("Error: String contains non-alphabetical letters. Please try again.");
                 }
             }
         } catch (IOException ex) {
-            System.out.println("Communication error: " + ex.getMessage());
+            System.out.println("Error: " + ex.getMessage());
         }
     }
 }
