@@ -9,8 +9,12 @@ public class server {
             return;
         }
 
+        // read port number from user input
         int port = Integer.parseInt(args[0]);
 
+        // create server socket and listen for incoming connections
+        // throw an error if there is an issue with the server socket
+        
         try (ServerSocket serverSocket = new ServerSocket(port)) {
             // The server should display the listening message if its running smoothly.
             System.out.println("Server is listening on port " + port);
